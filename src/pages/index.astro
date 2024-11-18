@@ -1,4 +1,7 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
+
 const clientName = 'Polytechnic Pros';
 const theCurrentYear = new Date();
 
@@ -19,9 +22,7 @@ const emojiSet = ['🍔', '🌭', '🍟', '🍕'];
 		<title>{clientName}</title>
 	</head>
 	<body id={clientName}>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<Navigation />
 
 		<h1>{clientName}</h1>
 
