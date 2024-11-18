@@ -1,7 +1,11 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = 'About';
 
 const skills = ["HTML", "CSS", "Astro?", "Java"];
+
+const skillColor = "blue";
 ---
 
 <html lang="en">
@@ -11,13 +15,13 @@ const skills = ["HTML", "CSS", "Astro?", "Java"];
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
-        <style>
+        <style define:vars={{skillColor}}>
         h1 {
             color: purple;
             font-size: 4rem;
         }
         .skill {
-            color: blue;
+            color: var(--skillColor);
             font-size: 2rem;
         }
 
